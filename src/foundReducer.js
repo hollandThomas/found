@@ -1,6 +1,21 @@
 import ActionTypes from './ActionTypes';
 
-export default function foundReducer(state = null, action) {
+const initialState = {
+  match: {
+    location: null,
+    routeIndices: null,
+    routeParams: null,
+    params: null,
+  }
+  resolvedMatch: {
+    location: null,
+    routeIndices: null,
+    routeParams: null,
+    params: null,
+  }
+}
+
+export default function foundReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
